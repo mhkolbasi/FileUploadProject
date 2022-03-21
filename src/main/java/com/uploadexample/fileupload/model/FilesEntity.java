@@ -1,5 +1,7 @@
 package com.uploadexample.fileupload.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -18,6 +20,7 @@ public class FilesEntity {
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value = "File Id")
     public int getId() {
         return id;
     }
@@ -28,6 +31,7 @@ public class FilesEntity {
 
     @Basic
     @Column(name = "Content")
+    @ApiModelProperty(value = "File Content")
     public byte[] getContent() {
         return content;
     }
@@ -38,6 +42,7 @@ public class FilesEntity {
 
     @Basic
     @Column(name = "Name")
+    @ApiModelProperty(value = "File Name")
     public String getName() {
         return name;
     }
@@ -48,6 +53,7 @@ public class FilesEntity {
 
     @Basic
     @Column(name = "Size")
+    @ApiModelProperty(value = "File Size")
     public int getSize() {
         return size;
     }
@@ -58,6 +64,7 @@ public class FilesEntity {
 
     @Basic
     @Column(name = "Time")
+    @ApiModelProperty(value = "File Upload Time")
     public Timestamp getUpdateTime() {
         return updateTime;
     }

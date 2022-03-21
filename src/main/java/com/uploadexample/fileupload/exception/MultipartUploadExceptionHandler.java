@@ -14,7 +14,7 @@ public class MultipartUploadExceptionHandler {
     public String handleFileUploadException(MaxUploadSizeExceededException exception,
                                             HttpServletRequest httpServletRequest,
                                             HttpServletResponse response){
-        return "File Size limit exceeded Please make sure the file size is well within 128KB ";
+        return "File Size limit exceeded Please make sure the file size is well within 5MB ";
     }
 
 }
