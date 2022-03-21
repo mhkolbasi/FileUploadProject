@@ -37,7 +37,7 @@ public class FileController {
 
          boolean b = fileService.fileTypeControl(multipartFile.getOriginalFilename());
            if (!b){
-                throw new FileTypeException("Farklı Dosya Türü");
+                throw new FileTypeException("png, jpeg, jpg, docx, pdf, xlsx must be in format");
             }
 
         try {
